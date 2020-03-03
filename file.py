@@ -18,15 +18,26 @@ from sklearn.svm import SVC
 from sklearn import model_selection
 from sklearn.ensemble import VotingClassifier
 
-# load dataset and check details
+# load dataset and check contents
 url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/iris.csv"
 names = ['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'class']
 dataset = read_csv(url, names=names)
-# shape
-print(dataset.shape)
-# head
-print(dataset.head(20))
-# descriptions
-print(dataset.describe())
-# class distribution
-print(dataset.groupby('class').size())
+# # shape
+# print(dataset.shape)
+# # head
+# print(dataset.head(20))
+# # descriptions
+# print(dataset.describe())
+# # class distribution
+# print(dataset.groupby('class').size())
+
+# visualise the data
+# box and whisker plots
+dataset.plot(kind='box', subplots=True, layout=(2,2), sharex=False, sharey=False)
+pyplot.show()
+# histograms
+dataset.hist()
+pyplot.show()
+# scatter plot matrix
+scatter_matrix(dataset)
+pyplot.show()
