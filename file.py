@@ -47,3 +47,18 @@ array = dataset.values
 X = array[:,0:4]
 y = array[:,4]
 X_train, X_validation, Y_train, Y_validation = train_test_split(X, y, test_size=0.20, random_state=1)
+
+# create the sub models
+estimators = []
+model1 = LogisticRegression(solver='liblinear', multi_class='ovr')
+estimators.append(('logistic', model1))
+model2 = LinearDiscriminantAnalysis()
+estimators.append(('linearda', model2))
+model3 = KNeighborsClassifier()
+estimators.append(('knclassifier', model3))
+model4 = DecisionTreeClassifier()
+estimators.append(('cart', model4))
+model5 = GaussianNB()
+estimators.append(('gaussian', model5))
+model6 = SVC(gamma='auto')
+estimators.append(('svm', model6))
