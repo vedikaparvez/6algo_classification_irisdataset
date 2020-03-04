@@ -62,3 +62,13 @@ model5 = GaussianNB()
 estimators.append(('gaussian', model5))
 model6 = SVC(gamma='auto')
 estimators.append(('svm', model6))
+
+# evaluate each model in turn
+results = []
+names = []
+for name, model in estimators:
+    kfold = StratifiedKFold(n_splits=10, random_state=1, shuffle=True)
+    cv_results = cross_val_score(model, X_train, Y_train, cv=kfold, scoring='accuracy')
+    results.append(cv_results)
+    names.append(name)
+    print('%s: %f (%f)' % (name, cv_results.mean(), cv_results.std()))
