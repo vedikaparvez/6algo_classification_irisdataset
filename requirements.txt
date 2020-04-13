@@ -78,7 +78,7 @@ mrcnn==0.2
 nbconvert==5.6.1
 nbformat==4.4.0
 networkx==2.2
-nltk==3.4
+nltk==3.4.5
 notebook==6.0.3
 numpy==1.15.4
 odfpy==1.4.0
