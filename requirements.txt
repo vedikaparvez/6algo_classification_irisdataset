@@ -109,7 +109,7 @@ python-crontab==2.3.5
 python-dateutil==2.7.3
 pytz==2018.5
 PyWavelets==1.0.1
-PyYAML==3.12
+PyYAML==5.4
 pyzmq==18.1.1
 qtconsole==4.7.0
 QtPy==1.9.0
