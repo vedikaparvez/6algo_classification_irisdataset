@@ -80,7 +80,7 @@ nbformat==4.4.0
 networkx==2.2
 nltk==3.4
 notebook==6.0.3
-numpy==1.15.4
+numpy==1.22.0
 odfpy==1.4.0
 opencv-python==3.4.4.19
 openpyxl==2.5.12
